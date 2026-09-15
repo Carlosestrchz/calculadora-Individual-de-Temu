@@ -14,13 +14,23 @@ def divis(a,b):
 def modul(a,b):
     return (a%b)
 
+#funcion auxiliar que se me ocurrió para validar la entrada de numeros porque tengo mucho tiempo todavia
+def pedirNum(valor):
+    while True:
+        try:
+            return float(input(valor))
+        except ValueError:
+            print("Error. Entrada no valida, introduzca solo numeros enteros o decimales.\n\n")
+
+
+
 def calculadora():
     print("====CALCULADORA MAS BASICA DEL MUNDO====\n")
     print("Por favor, no pida mucho que la hice en 30min y a parte usando Vim porque me gusta batallar\n")
     print("======================================================")
 
     #creo un acumulador para ir guardando el resultado
-    resultado = float(input("Introduce un valor por favor: "))
+    resultado = pedirNum("Introduce un valor por favor: ")
 
 
     #bucle infinito para que pida siempre un valor hasta que no lo rompa el usuario
@@ -36,7 +46,7 @@ def calculadora():
             print("Operación desconocida, por favor, intente de nuevo\n\n")
             continue
 
-        siguienteNum = float(input("Introduce el siguiente valor: "))
+        siguienteNum = pedirNum("Introduce el siguiente valor: ")
 
         #aplicamos la logica aritmetica y de control que se ocupa
         if operador == '+':
