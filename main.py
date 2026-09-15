@@ -14,6 +14,10 @@ def divis(a,b):
 def modul(a,b):
     return (a%b)
 
+#se añade nueva función para la ultima practica
+def exponent(a,b):
+    return (a**b)
+
 #funcion auxiliar que se me ocurrió para validar la entrada de numeros porque tengo mucho tiempo todavia
 def pedirNum(valor):
     while True:
@@ -35,14 +39,14 @@ def calculadora():
 
     #bucle infinito para que pida siempre un valor hasta que no lo rompa el usuario
     while True:
-        operador = input("OPERADORES: '+' para sumar, '-' para restar, '*' para multiplicar, '/' para dividir, '%' para modulo, o '=' para obtener resultado. \n Introduzca operación: ")
+        operador = input("OPERADORES: '+' para sumar, '-' para restar, '*' para multiplicar, '/' para dividir, '%' para modulo,'**' para potencias, o '=' para obtener resultado. \n Introduzca operación: ")
 
 
         if operador == '=':
             break
 
         #validamos la entrada
-        if operador not in ('+','-','*','/','%'):
+        if operador not in ('+','-','*','/','%','**'):
             print("Operación desconocida, por favor, intente de nuevo\n\n")
             continue
 
@@ -67,6 +71,9 @@ def calculadora():
 
         elif operador == '%':
             resultado = modul(resultado, siguienteNum)
+
+        elif operador == '**':
+            resultado = exponent(resultado, siguienteNum)
 
         print(f"Subtotal actual: {resultado}\n\n")
 
