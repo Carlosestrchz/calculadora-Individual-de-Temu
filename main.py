@@ -44,14 +44,14 @@ def calculadora():
             resultado = resta(resultado, siguienteNum)
 
         elif operador == '*':
-            resultado == multip(resultado, siguienteNum)
+            resultado = multip(resultado, siguienteNum)
 
         elif operador == '/':
             if siguienteNum == 0:
                 print("Error. No se puede dividir entre cero.\n")
                 continue
 
-            resultado == divis(resultado, siguienteNum)
+            resultado = divis(resultado, siguienteNum)
 
         elif operador == '%':
             resultado = modul(resultado, siguienteNum)
