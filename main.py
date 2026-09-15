@@ -16,6 +16,8 @@ def modul(a,b):
 
 def calculadora():
     print("====CALCULADORA MAS BASICA DEL MUNDO====\n")
+    print("Por favor, no pida mucho que la hice en 30min y a parte usando Vim porque me gusta batallar\n")
+    print("======================================================")
 
     #creo un acumulador para ir guardando el resultado
     resultado = float(input("Introduce un valor por favor: "))
@@ -31,7 +33,7 @@ def calculadora():
 
         #validamos la entrada
         if operador not in ('+','-','*','/','%'):
-            print("Operación desconocida, por favor, intente de nuevo\n")
+            print("Operación desconocida, por favor, intente de nuevo\n\n")
             continue
 
         siguienteNum = float(input("Introduce el siguiente valor: "))
@@ -48,7 +50,7 @@ def calculadora():
 
         elif operador == '/':
             if siguienteNum == 0:
-                print("Error. No se puede dividir entre cero.\n")
+                print("Error. No se puede dividir entre cero.\n\n")
                 continue
 
             resultado = divis(resultado, siguienteNum)
@@ -56,9 +58,11 @@ def calculadora():
         elif operador == '%':
             resultado = modul(resultado, siguienteNum)
 
-        print(f"Subtotal actual: {resultado}")
+        print(f"Subtotal actual: {resultado}\n\n")
 
-    print(f"\nResultado final: {resultado}")
+    print(f"\nResultado final: {resultado}\n")
+    print("GRACIAS POR PROBAR MI CALCULADORA CHAFA ;D\n\n\n")
+    
 
 
 #arrancamos la funcion calculadora
