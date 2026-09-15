@@ -14,9 +14,9 @@ def divis(a,b):
 def modul(a,b):
     return (a%b)
 
-#se añade nueva función para la ultima practica
-def exponent(a,b):
-    return (a**b)
+#se añade nueva función para la ultima practica minicalculadora.py
+def potencia(base,exponente):
+    return (base ** exponente)
 
 #funcion auxiliar que se me ocurrió para validar la entrada de numeros porque tengo mucho tiempo todavia
 def pedirNum(valor):
@@ -73,7 +73,7 @@ def calculadora():
             resultado = modul(resultado, siguienteNum)
 
         elif operador == '**':
-            resultado = exponent(resultado, siguienteNum)
+            resultado = potencia(resultado, siguienteNum)
 
         print(f"Subtotal actual: {resultado}\n\n")
 
